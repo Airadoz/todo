@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo app?</title>
-    <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="wrapper">
-        <div class="sidebar"></div>
-        <div class="main_content"></div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo app?</title>
+        <script src="./main.js" defer></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar"></div>
+            <div class="main_content">
+                <button class="open_modal">Add todo</button>
+                <template class="add_todo">
+                    <dialog>
+                        <fieldset>
+                            <form method="dialog">
+                                <div class="form_title">
+                                    <label for="title">Enter todo title here!</label>
+                                    <input id="title" type="text" />
+                                </div>
+                                <div class="form_description">
+                                    <label for="description">Enter todo description here!</label>
+                                    <textarea name="description" id="description"></textarea>
+                                </div>
+                                <div class="form_status">
+                                    <label for="status">What is todo status?</label>
+                                    <select id="status">
+                                        <option value="not_started">Haven't started yet</option>
+                                        <option value="started">In process</option>
+                                        <option value="finished">Finished</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </dialog>
+                </template>
+            </div>
+        </div>
+    </body>
 </html>
