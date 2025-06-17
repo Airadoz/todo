@@ -9,34 +9,38 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="sidebar"></div>
-            <div class="main_content">
+            <div class="sidebar">
                 <button class="open_modal">Add todo</button>
-                <template class="add_todo">
-                    <dialog>
-                        <fieldset>
-                            <form method="dialog">
-                                <div class="form_title">
-                                    <label for="title">Enter todo title here!</label>
-                                    <input id="title" type="text" />
-                                </div>
-                                <div class="form_description">
-                                    <label for="description">Enter todo description here!</label>
-                                    <textarea name="description" id="description"></textarea>
-                                </div>
-                                <div class="form_status">
-                                    <label for="status">What is todo status?</label>
-                                    <select id="status">
-                                        <option value="not_started">Haven't started yet</option>
-                                        <option value="started">In process</option>
-                                        <option value="finished">Finished</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </fieldset>
-                    </dialog>
-                </template>
+            </div>
+            <div class="main_content">
+                <div class="todos_wrapper">
+                    
+                </div>
             </div>
         </div>
+        <template class="add_todo">
+            <dialog>
+                <fieldset>
+                    <form method="dialog">
+                        <div class="form_title">
+                            <label for="title">Enter todo title here!</label>
+                            <input id="title" type="text" />
+                        </div>
+                        <div class="form_description">
+                            <label for="description">Enter todo description here!</label>
+                            <textarea name="description" id="description"></textarea>
+                        </div>
+                        <div class="form_status">
+                            <label for="status">What is todo status?</label>
+                            <select id="status">
+                                <option value="not_started">Haven't started yet</option>
+                                <option value="started">In process</option>
+                                <option value="finished">Finished</option>
+                            </select>
+                        </div>
+                    </form>
+                </fieldset>
+            </dialog>
+        </template>
     </body>
 </html>
