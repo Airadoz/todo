@@ -27,6 +27,26 @@ let todos = [
         description: "Your first todo's description",
         status: "Haven't started yet",
     },
+    {
+        title: "Your first todo!",
+        description: "Your first todo's description",
+        status: "Haven't started yet",
+    },
+    {
+        title: "Your first todo!",
+        description: "Your first todo's description",
+        status: "Haven't started yet",
+    },
+    {
+        title: "Your first todo!",
+        description: "Your first todo's description",
+        status: "Haven't started yet",
+    },
+    {
+        title: "Your first todo!",
+        description: "Your first todo's description",
+        status: "Haven't started yet",
+    },
 ];
 
 function todo_constructor(name, desc, status) {
@@ -53,7 +73,7 @@ function display_todos(arr) {
             table_view_template.content.cloneNode(true);
         const table_body = table_view_template_copy.querySelector("tbody");
 
-        arr.forEach((todo) => {
+        arr.forEach((todo, index) => {
             if (grid_view) {
                 const todo_item_copy =
                     todo_item_template.content.cloneNode(true);
@@ -67,6 +87,7 @@ function display_todos(arr) {
                 todo_item.querySelector(
                     ".status"
                 ).innerHTML = `<b>Todo status</b>: ${todo.status}`;
+                todo_item.setAttribute("data-id", index);
                 grid_view_wrapper.append(todo_item);
             } else {
                 const table_item_copy =
@@ -77,6 +98,7 @@ function display_todos(arr) {
                 table_item.querySelector(".description").innerHTML =
                     todo.description;
                 table_item.querySelector(".status").innerHTML = todo.status;
+                table_item.setAttribute("data-id", index);
 
                 table_body.append(table_item);
                 list_view_wrapper.append(table_view_template_copy);
