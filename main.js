@@ -47,12 +47,12 @@ function get_todo_data(modal) {
 function display_todos(arr) {
     grid_view_wrapper.innerHTML = "";
     list_view_wrapper.innerHTML = "";
-    const table_view_template_copy =
-        table_view_template.content.cloneNode(true);
-    const table_body = table_view_template_copy.querySelector("tbody");
-    list_view_wrapper.append(table_view_template_copy);
 
     if (Array.isArray(arr) && arr.length !== 0) {
+        const table_view_template_copy =
+            table_view_template.content.cloneNode(true);
+        const table_body = table_view_template_copy.querySelector("tbody");
+
         arr.forEach((todo) => {
             if (grid_view) {
                 const todo_item_copy =
@@ -79,6 +79,7 @@ function display_todos(arr) {
                 table_item.querySelector(".status").innerHTML = todo.status;
 
                 table_body.append(table_item);
+                list_view_wrapper.append(table_view_template_copy);
             }
         });
     }
