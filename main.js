@@ -9,6 +9,9 @@ const todos_wrapper = document.querySelector(".todos_wrapper");
 const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
 const list_view_wrapper = document.querySelector(".list_view_wrapper");
 
+const set_grid_view = document.querySelector(".set_grid_view");
+const set_list_view = document.querySelector(".set_list_view");
+
 const todo_item_template = document.querySelector(".todo_item_template");
 
 const grid_view = true;
@@ -67,7 +70,14 @@ modal_form.addEventListener("submit", () => {
     todos.push(new_todo);
     console.log(todos);
     display_todos(todos);
-    modal_form.reset()
+    modal_form.reset();
+});
+
+set_grid_view.addEventListener("click", () => {
+    grid_view = true;
+});
+set_list_view.addEventListener("click", () => {
+    grid_view = false;
 });
 
 todos_wrapper.append(modal_clone);
