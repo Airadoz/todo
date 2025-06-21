@@ -6,6 +6,11 @@ const modal_close = modal.querySelector(".cancel_btn");
 const modal_form = modal.querySelector("form");
 
 const todos_wrapper = document.querySelector(".todos_wrapper");
+const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
+const list_view_wrapper = document.querySelector(".list_view_wrapper");
+
+const todo_item_template = document.querySelector(".todo_item_template");
+const todo_item_copy = todo_item_template.content.cloneNode(true);
 
 let todos = [
     {
