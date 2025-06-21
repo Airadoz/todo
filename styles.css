@@ -87,5 +87,4 @@ h1, h2, h3, h4, h5, h6 {
 .list_view_wrapper .todo_item td, th{
   padding: 1.5rem;
   border: 1px solid black;
-  /* border-right: unset; */
 }
