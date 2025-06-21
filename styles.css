@@ -56,6 +56,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*RESETS END*/
+.wrapper{
+  display: flex;
+
+}
+.sidebar{
+  max-width: 250px;
+}
+.main_content{
+  width: 100%;
+}
 
 /*grid view*/
 

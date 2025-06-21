@@ -76,7 +76,7 @@ modal_form.addEventListener("submit", () => {
 set_grid_view.addEventListener("click", () => {
     grid_view = true;
 });
-set_list_view.addEventListener("click", () => {
+set_table_view.addEventListener("click", () => {
     grid_view = false;
 });
 
