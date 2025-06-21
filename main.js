@@ -9,6 +9,10 @@ const todos_wrapper = document.querySelector(".todos_wrapper");
 const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
 const list_view_wrapper = document.querySelector(".list_view_wrapper");
 
+const table_view_template = document.querySelector(".table_view_template");
+const table_view_item_template = document.querySelector(".table_view_item_template");
+
+
 const set_grid_view = document.querySelector(".set_grid_view");
 const set_table_view = document.querySelector(".set_table_view");
 
