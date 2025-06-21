@@ -12,6 +12,8 @@ const list_view_wrapper = document.querySelector(".list_view_wrapper");
 const todo_item_template = document.querySelector(".todo_item_template");
 const todo_item_copy = todo_item_template.content.cloneNode(true);
 
+const grid_view = true;
+
 let todos = [
     {
         title: "Your first todo!",
@@ -46,5 +48,6 @@ modal_form.addEventListener("submit", () => {
     todos.push(new_todo);
     console.log(todos);
 });
+
 
 todos_wrapper.append(modal_clone);
