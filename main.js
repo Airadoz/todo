@@ -10,8 +10,9 @@ const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
 const list_view_wrapper = document.querySelector(".list_view_wrapper");
 
 const table_view_template = document.querySelector(".table_view_template");
-const table_view_item_template = document.querySelector(".table_view_item_template");
-
+const table_view_item_template = document.querySelector(
+    ".table_view_item_template"
+);
 
 const set_grid_view = document.querySelector(".set_grid_view");
 const set_table_view = document.querySelector(".set_table_view");
@@ -46,18 +47,38 @@ function get_todo_data(modal) {
 function display_todos(arr) {
     grid_view_wrapper.innerHTML = "";
     list_view_wrapper.innerHTML = "";
+    const table_view_template_copy =
+        table_view_template.content.cloneNode(true);
+    const table_body = table_view_template_copy.querySelector("tbody");
+    list_view_wrapper.append(table_view_template_copy);
+
     if (Array.isArray(arr) && arr.length !== 0) {
         arr.forEach((todo) => {
-            const todo_item_copy = todo_item_template.content.cloneNode(true);
-            let todo_item = todo_item_copy.querySelector(".todo_item");
-            todo_item.querySelector(".title").innerHTML = todo.title;
-            todo_item.querySelector(".description").innerHTML =
-                todo.description;
-            todo_item.querySelector(".status").innerHTML = todo.status;
             if (grid_view) {
+                const todo_item_copy =
+                    todo_item_template.content.cloneNode(true);
+                let todo_item = todo_item_copy.querySelector(".todo_item");
+                todo_item.querySelector(
+                    ".title"
+                ).innerHTML = `<b>Todo title</b>: ${todo.title}`;
+                todo_item.querySelector(
+                    ".description"
+                ).innerHTML = `<b>Todo description</b>: ${todo.description}`;
+                todo_item.querySelector(
+                    ".status"
+                ).innerHTML = `<b>Todo status</b>: ${todo.status}`;
                 grid_view_wrapper.append(todo_item);
             } else {
-                list_view_wrapper.append(todo_item);
+                const table_item_copy =
+                    table_view_item_template.content.cloneNode(true);
+                const table_item = table_item_copy.querySelector("tr");
+
+                table_item.querySelector(".title").innerHTML = todo.title;
+                table_item.querySelector(".description").innerHTML =
+                    todo.description;
+                table_item.querySelector(".status").innerHTML = todo.status;
+
+                table_body.append(table_item);
             }
         });
     }
