@@ -75,9 +75,11 @@ modal_form.addEventListener("submit", () => {
 
 set_grid_view.addEventListener("click", () => {
     grid_view = true;
+    display_todos(todos);
 });
 set_table_view.addEventListener("click", () => {
     grid_view = false;
+    display_todos(todos);
 });
 
 todos_wrapper.append(modal_clone);
