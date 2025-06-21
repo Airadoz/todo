@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 /*RESETS END*/
 .wrapper{
   display: flex;
-
+  margin: 0 2rem ;
 }
 .sidebar{
   max-width: 250px;
@@ -72,8 +72,20 @@ h1, h2, h3, h4, h5, h6 {
 .grid_view_wrapper{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.grid_view_wrapper .todo_item{
+  padding: 1.5rem;
+  border: 1px solid black;
 }
 /*table view*/
+
 .list_view_wrapper table{
   width: 100%;
+  border-collapse: collapse;
+}
+.list_view_wrapper .todo_item td, th{
+  padding: 1.5rem;
+  border: 1px solid black;
+  /* border-right: unset; */
 }
