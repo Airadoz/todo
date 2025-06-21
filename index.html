@@ -14,37 +14,56 @@
             </div>
             <div class="main_content">
                 <div class="todos_wrapper">
-                    
+                    <div class="grid_view_wrapper"></div>
+                    <div class="list_view_wrapper"></div>
                 </div>
             </div>
         </div>
-        <template class="add_todo">
+        <template class="add_todo_template">
             <dialog>
                 <fieldset>
                     <form method="dialog">
                         <div class="form_title">
                             <label for="title">Enter todo title here!</label>
-                            <input id="title" type="text" required/>
+                            <input id="title" type="text" required />
                         </div>
                         <div class="form_description">
-                            <label for="description">Enter todo description here!</label>
-                            <textarea name="description" id="description" required></textarea>
+                            <label for="description"
+                                >Enter todo description here!</label
+                            >
+                            <textarea
+                                name="description"
+                                id="description"
+                                required></textarea>
                         </div>
                         <div class="form_status">
                             <label for="status">What is todo status?</label>
                             <select id="status" required>
-                                <option value="not_started">Haven't started yet</option>
+                                <option value="not_started">
+                                    Haven't started yet
+                                </option>
                                 <option value="started">In process</option>
                                 <option value="finished">Finished</option>
                             </select>
                         </div>
                         <div>
-                            <button type="submit" class="submit_btn">Submit</button>
-                            <button type="reset" class="cancel_btn">Cancel</button>
+                            <button type="submit" class="submit_btn">
+                                Submit
+                            </button>
+                            <button type="reset" class="cancel_btn">
+                                Cancel
+                            </button>
                         </div>
                     </form>
                 </fieldset>
             </dialog>
+        </template>
+        <template class="todo_item_template">
+            <div class="todo_item">
+                <div class="name"></div>
+                <div class="description"></div>
+                <div class="status"></div>
+            </div>
         </template>
     </body>
 </html>
