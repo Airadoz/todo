@@ -10,7 +10,7 @@ const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
 const list_view_wrapper = document.querySelector(".list_view_wrapper");
 
 const set_grid_view = document.querySelector(".set_grid_view");
-const set_list_view = document.querySelector(".set_list_view");
+const set_table_view = document.querySelector(".set_table_view");
 
 const todo_item_template = document.querySelector(".todo_item_template");
 
