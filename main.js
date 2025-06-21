@@ -14,7 +14,7 @@ const set_list_view = document.querySelector(".set_list_view");
 
 const todo_item_template = document.querySelector(".todo_item_template");
 
-const grid_view = true;
+let grid_view = true;
 
 let todos = [
     {
