@@ -24,19 +24,23 @@
                     <form method="dialog">
                         <div class="form_title">
                             <label for="title">Enter todo title here!</label>
-                            <input id="title" type="text" />
+                            <input id="title" type="text" required/>
                         </div>
                         <div class="form_description">
                             <label for="description">Enter todo description here!</label>
-                            <textarea name="description" id="description"></textarea>
+                            <textarea name="description" id="description" required></textarea>
                         </div>
                         <div class="form_status">
                             <label for="status">What is todo status?</label>
-                            <select id="status">
+                            <select id="status" required>
                                 <option value="not_started">Haven't started yet</option>
                                 <option value="started">In process</option>
                                 <option value="finished">Finished</option>
                             </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="submit_btn">Submit</button>
+                            <button type="reset" class="cancel_btn">Cancel</button>
                         </div>
                     </form>
                 </fieldset>
