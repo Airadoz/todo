@@ -25,29 +25,39 @@ let currently_editing = 0;
 
 let todos = [
     {
-        title: "Your first todo!1",
-        description: "Your first todo's description",
-        status: "Haven't started yet",
+        title: "Grocery Shopping",
+        description: "Pick up milk, eggs, bread, and fruits for the week.",
+        status: "Haven't started yet", // Maybe you're still making your list!
     },
     {
-        title: "Your first todo!2",
-        description: "Your first todo's description",
-        status: "Haven't started yet",
+        title: "Walk the Dog",
+        description: "Take Buster for his evening stroll around the park.",
+        status: "Haven't started yet", // Currently out with Buster!
     },
     {
-        title: "Your first todo!3",
-        description: "Your first todo's description",
-        status: "Haven't started yet",
+        title: "Finish Project Report",
+        description: "Complete the Q2 sales report for the team meeting tomorrow.",
+        status: "Haven't started yet", // Waiting on data from a colleague.
     },
     {
-        title: "Your first todo!4",
-        description: "Your first todo's description",
-        status: "Haven't started yet",
+        title: "Call Mom",
+        description: "Check in with Mom and see how her day was.",
+        status: "Haven't started yet", // Just hung up with her!
     },
     {
-        title: "Your first todo!5",
-        description: "Your first todo's description",
-        status: "Haven't started yet",
+        title: "Plan Weekend Getaway",
+        description: "Research flights and hotels for the trip to Amsterdam.",
+        status: "Haven't started yet", // Just dreaming about it for now.
+    },
+    {
+        title: "Workout at the Gym",
+        description: "Hit the gym for a cardio and weights session.",
+        status: "Haven't started yet", // Feeling good after that workout!
+    },
+    {
+        title: "Read 'Dune' Chapter 3",
+        description: "Continue reading the next chapter of 'Dune' before bed.",
+        status: "Haven't started yet", // About halfway through the chapter.
     },
 ];
 
@@ -91,7 +101,7 @@ function delete_todo(arr, id) {
 }
 function edit_todo(arr, id) {
     if (Array.isArray(arr) && arr.length !== 0 && typeof id === "number") {
-        let edit = get_todo_data(modal)
+        let edit = get_todo_data(modal);
         arr[id].title = edit.title;
         arr[id].description = edit.description;
         // arr[id].status = edit.status;
