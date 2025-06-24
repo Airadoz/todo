@@ -10,9 +10,7 @@ const grid_view_wrapper = document.querySelector(".grid_view_wrapper");
 const list_view_wrapper = document.querySelector(".list_view_wrapper");
 
 const table_view_template = document.querySelector(".table_view_template");
-const table_view_item_template = document.querySelector(
-    ".table_view_item_template"
-);
+const table_view_item_template = document.querySelector(".table_view_item_template");
 
 const set_grid_view = document.querySelector(".set_grid_view");
 const set_table_view = document.querySelector(".set_table_view");
@@ -129,24 +127,16 @@ function display_todos(arr) {
     list_view_wrapper.innerHTML = "";
 
     if (Array.isArray(arr) && arr.length !== 0) {
-        const table_view_template_copy =
-            table_view_template.content.cloneNode(true);
+        const table_view_template_copy = table_view_template.content.cloneNode(true);
         const table_body = table_view_template_copy.querySelector("tbody");
 
         arr.forEach((todo, index) => {
             if (grid_view) {
-                const todo_item_copy =
-                    todo_item_template.content.cloneNode(true);
+                const todo_item_copy = todo_item_template.content.cloneNode(true);
                 let todo_item = todo_item_copy.querySelector(".todo_item");
-                todo_item.querySelector(
-                    ".title"
-                ).innerHTML = `<b>Todo title</b>: ${todo.title}`;
-                todo_item.querySelector(
-                    ".description"
-                ).innerHTML = `<b>Todo description</b>: ${todo.description}`;
-                todo_item.querySelector(
-                    ".status"
-                ).innerHTML = `<b>Todo status</b>: ${todo.status}`;
+                todo_item.querySelector(".title").innerHTML = `<b>Todo title</b>: ${todo.title}`;
+                todo_item.querySelector(".description").innerHTML = `<b>Todo description</b>: ${todo.description}`;
+                todo_item.querySelector(".status").innerHTML = `<b>Todo status</b>: ${todo.status}`;
                 todo_item.setAttribute("data-id", index);
                 const edit_btn = todo_item.querySelector(".edit");
                 const delete_btn = todo_item.querySelector(".delete");
@@ -164,13 +154,11 @@ function display_todos(arr) {
                 });
                 grid_view_wrapper.append(todo_item);
             } else {
-                const table_item_copy =
-                    table_view_item_template.content.cloneNode(true);
+                const table_item_copy = table_view_item_template.content.cloneNode(true);
                 const table_item = table_item_copy.querySelector("tr");
 
                 table_item.querySelector(".title").innerHTML = todo.title;
-                table_item.querySelector(".description").innerHTML =
-                    todo.description;
+                table_item.querySelector(".description").innerHTML = todo.description;
                 table_item.querySelector(".status").innerHTML = todo.status;
                 table_item.setAttribute("data-id", index);
 
