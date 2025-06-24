@@ -78,10 +78,55 @@ h6 {
 }
 
 /*RESETS END*/
+/*dialog*/
+dialog {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+dialog::backdrop {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+dialog input,
+dialog textarea,
+dialog select {
+    background-color: black;
+    color: white;
+}
+dialog fieldset {
+    padding: 2rem;
+}
+dialog form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+dialog form label,
+dialog form input,
+dialog form select,
+dialog form textarea {
+    flex: 1 1 0;
+    width: 100%;
+    padding: 0.75rem;
+}
+dialog form div {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+dialog form button {
+    width: 100%;
+}
+
+/*wrapper and sidebar*/
 .wrapper {
     width: 100%;
     background-color: rgb(0, 0, 0);
     height: 100vh;
+    font-size: 1.2rem;
 }
 .main_content h1 {
     text-align: center;
@@ -140,6 +185,7 @@ th {
     border: 1px solid white;
 }
 
+/*Buttons*/
 .btn {
     padding: 0.75rem;
     background-color: rgb(44, 44, 44);
