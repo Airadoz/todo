@@ -24,6 +24,7 @@ body {
     line-height: 1.5;
     /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+    margin: 0;
 }
 
 /* 6. Improve media defaults */
@@ -91,9 +92,15 @@ h6 {
     margin: 0 2rem;
     padding: 2rem 0;
     color: white;
+    height: 100%;
 }
 .sidebar {
-    max-width: 250px;
+    width: 350px;
+    height: 100%;
+    padding-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .main_content {
     width: 100%;
