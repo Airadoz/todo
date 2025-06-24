@@ -131,7 +131,7 @@ dialog form button {
     width: 100%;
     background-color: rgb(0, 0, 0);
     height: 100vh;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .main_content h1 {
     text-align: center;
@@ -164,7 +164,7 @@ dialog form button {
     gap: 2rem;
 }
 .grid_view_wrapper .todo_item {
-    padding: 1.5rem;
+    padding: 2.5rem;
     border: 1px solid white;
     border-radius: 10px;
     display: flex;
