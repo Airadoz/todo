@@ -78,6 +78,11 @@ h6 {
 }
 
 /*RESETS END*/
+
+:root {
+    --inner-wrap-margin: 0 20rem;
+}
+
 /*dialog*/
 dialog {
     background-color: black;
@@ -134,7 +139,7 @@ dialog form button {
 }
 .inner_wrapper {
     display: flex;
-    margin: 0 2rem;
+    margin: var(--inner-wrap-margin);
     padding: 2rem 0;
     color: white;
     height: 100%;
